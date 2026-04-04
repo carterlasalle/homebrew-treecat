@@ -5,21 +5,21 @@
 class Treecat < Formula
   desc "Recursive directory tree + syntax-highlighted file contents"
   homepage "https://github.com/carterlasalle/treecat"
-  version "0.1.4"
+  version "0.2.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/carterlasalle/treecat/releases/download/v0.1.4/treecat_darwin_amd64.tar.gz"
-      sha256 "d8c6f38d73876ad6f15128c58dd7495269d6f729033a0ad2c0a4f968af72bcc2"
+      url "https://github.com/carterlasalle/treecat/releases/download/v0.2.0/treecat_darwin_amd64.tar.gz"
+      sha256 "019084d8805998fb20cc4617d29c78339ac0ec713698ef4bff8d4fc7ed76004a"
 
       define_method(:install) do
         bin.install "treecat"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/carterlasalle/treecat/releases/download/v0.1.4/treecat_darwin_arm64.tar.gz"
-      sha256 "00de6b60e028b7723837e239a12deaf3fcb81011744839f73bfc54977111993c"
+      url "https://github.com/carterlasalle/treecat/releases/download/v0.2.0/treecat_darwin_arm64.tar.gz"
+      sha256 "9e1491f4d153c46adf7c2150a6da67761346b09b2efadadb0141f977f4faadd1"
 
       define_method(:install) do
         bin.install "treecat"
@@ -29,15 +29,15 @@ class Treecat < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/carterlasalle/treecat/releases/download/v0.1.4/treecat_linux_amd64.tar.gz"
-      sha256 "98c7eb35ccb850fda513a09c0a642717fc5c90462c09847356f38b0e8a6b6c76"
+      url "https://github.com/carterlasalle/treecat/releases/download/v0.2.0/treecat_linux_amd64.tar.gz"
+      sha256 "a45ef0f868c998fd275bf4dc9b88810a8b87283d6255518c623d9d39bbc8fa1e"
       define_method(:install) do
         bin.install "treecat"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/carterlasalle/treecat/releases/download/v0.1.4/treecat_linux_arm64.tar.gz"
-      sha256 "e0f376738a91526ba9f6e612822ba6b96f2279e024e4c278294923c330d611d3"
+      url "https://github.com/carterlasalle/treecat/releases/download/v0.2.0/treecat_linux_arm64.tar.gz"
+      sha256 "e2f29da035ac63206e5c36fd2701096ef2b9ea4bd3d995025059d5ebdea0e747"
       define_method(:install) do
         bin.install "treecat"
       end
