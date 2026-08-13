@@ -22,7 +22,7 @@ class Tracelayer < Formula
     ENV["PIPX_BIN_DIR"] = libexec/"bin"
     python = formula_opt_bin("python@3.13")
     # Build from the formula's own cached sdist (no second PyPI fetch).
-    system "pipx", "install", "--python", python, "--spec", buildpath, "tracelayer"
+    system "pipx", "install", "--python", python, buildpath.to_s
     bin.install_symlink libexec/"bin/trace", libexec/"bin/tracelayer"
   end
 
